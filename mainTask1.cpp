@@ -34,8 +34,8 @@ int main ()
     sNode* pointer = &first;
     while (pointer != NULL)
     {
-        printf ("%d\t", pointer -> data);
-        pointer = pointer -> next;
+        printf ("%d\t", pointer->data);
+        pointer = pointer->next;
     }
     putchar ('\n');
 
@@ -45,8 +45,8 @@ int main ()
     pointer = &first;
     while (pointer != NULL)
     {
-        printf ("%d\t", pointer -> data);
-        pointer = pointer -> next;
+        printf ("%d\t", pointer->data);
+        pointer = pointer->next;
     }
     return 0;
 }
@@ -59,16 +59,16 @@ int RemoveNode (const int element, allNode allN)
 
     while (pointer != NULL)
     {
-        if (pointer -> data == element)
+        if (pointer->data == element)
         {
-            prevPointer -> next = pointer -> next;
+            prevPointer->next = pointer->next;
             printf ("< number of removed Node: %d  address: %d >\n",count, pointer);
-            pointer -> next = NULL;
-            pointer -> data = 0;
+            pointer->next = NULL;
+            pointer->data = 0;
             return 1;
         }
         prevPointer = pointer;
-        pointer = pointer -> next;
+        pointer = pointer->next;
         count++;
     }
     return 1;
